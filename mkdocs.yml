@@ -1,0 +1,152 @@
+site_name: "Vector Databases — Theory, Engineering, and Frontiers"
+site_url: https://atulRanaa.github.io/vector-db-book
+site_description: >-
+  A comprehensive technical book covering vector database internals — from
+  high-dimensional geometry and ANN algorithms to distributed architectures,
+  GPU acceleration, and production deployment patterns.
+
+docs_dir: docs
+site_dir: site
+use_directory_urls: true
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: deep purple
+      accent: teal
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - scheme: slate
+      primary: deep purple
+      accent: teal
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  icon:
+    repo: fontawesome/brands/github
+    logo: material/database-search
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - navigation.indexes
+    - toc.integrate
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.code.annotate
+
+repo_url: https://github.com/atulRanaa/vector-db-book
+repo_name: atulRanaa/vector-db-book
+edit_uri: edit/main/docs/
+
+copyright: >-
+  Copyright &copy; 2025 — Vector DB Book Contributors
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+
+extra_css:
+  - stylesheets/extra.css
+
+markdown_extensions:
+  - pymdownx.arithmatex:
+      generic: true
+      tex_inline_wrap: ['$', '$']
+      tex_block_wrap: ['$$', '$$']
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets:
+      base_path:
+        - .
+      check_paths: false
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.details
+  - pymdownx.mark
+  - pymdownx.critic
+  - pymdownx.keys
+  - pymdownx.smartsymbols
+  - admonition
+  - attr_list
+  - md_in_html
+  - def_list
+  - footnotes
+  - tables
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - meta
+  - toc:
+      permalink: true
+      toc_depth: 3
+
+plugins:
+  - search
+  - tags
+  - glightbox
+  - git-revision-date-localized:
+      enable_creation_date: true
+      enabled: !ENV [MKDOCS_ENABLE_GIT_REVISION_DATE, false]
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/atulRanaa/vector-db-book
+
+nav:
+  - Home: index.md
+  - "Part I — Foundations":
+      - part-1-foundations/index.md
+      - "0. Build a Vector DB from Scratch": part-1-foundations/quickstart.md
+      - "1. High-Dimensional Geometry": part-1-foundations/high-dimensional-geometry.md
+      - "2. ANN Algorithms": part-1-foundations/ann-algorithms.md
+      - "3. Index-Storage Trade-offs": part-1-foundations/index-storage-tradeoffs.md
+      - "4. Query Semantics & Similarities": part-1-foundations/query-semantics.md
+      - "5. Data Ingestion & Vectorization": part-1-foundations/data-ingestion.md
+  - "Part II — System Architecture":
+      - part-2-architecture/index.md
+      - "6. Core Components": part-2-architecture/core-components.md
+      - "7. Storage Engines": part-2-architecture/storage-engines.md
+      - "8. Distributed Vector Stores": part-2-architecture/distributed-stores.md
+      - "9. Real-Time Update Handling": part-2-architecture/realtime-updates.md
+      - "10. Hybrid Search": part-2-architecture/hybrid-search.md
+      - "11. Hardware Acceleration": part-2-architecture/hardware-acceleration.md
+      - "12. Observability & Operations": part-2-architecture/observability-operations.md
+  - "Part III — Implementation":
+      - part-3-implementation/index.md
+      - "13. HNSW Store in Rust": part-3-implementation/hnsw-rust.md
+      - "14. PQ-IVF on GPUs": part-3-implementation/pq-ivf-gpu.md
+      - "15. Transactional Schemes": part-3-implementation/transactional-schemes.md
+      - "16. Elastic Scaling": part-3-implementation/elastic-scaling.md
+      - "17. Benchmark Harness": part-3-implementation/benchmark-harness.md
+  - "Part IV — Advanced Topics":
+      - part-4-advanced/index.md
+      - "18. Privacy-Preserving Search": part-4-advanced/privacy-preserving-search.md
+      - "19. Continual & Online Learning": part-4-advanced/continual-online-learning.md
+      - "20. Vector DBs for Gen-AI Agents": part-4-advanced/vector-db-genai-agents.md
+      - "21. Future Directions": part-4-advanced/future-directions.md
+      - "22. Advanced Open Source DBs": part-4-advanced/advanced-open-source-dbs.md
+      - "23. Real-World Case Studies": part-4-advanced/real-world-case-studies.md
+      - "24. In-Database ML & Feature Stores": part-4-advanced/in-database-ml-and-feature-stores.md
+  - "API Reference": api-reference.md
+  - Appendices:
+      - appendices/index.md
+      - "A. Math Reference": appendices/math-reference.md
+      - "B. Glossary": appendices/glossary.md
+      - "C. Bibliography": appendices/bibliography.md
+      - "D. DB Comparison Matrix": appendices/comparison-matrix.md

@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/Users/ranaatul/Code/vector-db-book/src/cpp/db/build/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

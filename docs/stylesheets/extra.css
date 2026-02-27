@@ -1,0 +1,49 @@
+/* Custom styles for Vector DB Book */
+
+/* Override default max-width for wider content area */
+.md-grid {
+  max-width: 1440px;
+}
+
+/* Style admonition titles */
+.md-typeset .admonition-title,
+.md-typeset summary {
+  font-weight: 700;
+}
+
+/* Better code block styling */
+.md-typeset code {
+  border-radius: 4px;
+}
+
+/* Math display blocks — add breathing room */
+.MathJax_Display {
+  margin: 1.5em 0 !important;
+}
+
+/* Part headers in navigation */
+.md-nav__item--nested > .md-nav__link {
+  font-weight: 600;
+}
+
+/* Chapter status badges */
+.status-badge {
+  display: inline-block;
+  padding: 0.15em 0.5em;
+  border-radius: 0.25em;
+  font-size: 0.75em;
+  font-weight: 600;
+  vertical-align: middle;
+}
+.status-badge.draft {
+  background-color: #ffc107;
+  color: #333;
+}
+.status-badge.complete {
+  background-color: #4caf50;
+  color: #fff;
+}
+.status-badge.in-progress {
+  background-color: #2196f3;
+  color: #fff;
+}

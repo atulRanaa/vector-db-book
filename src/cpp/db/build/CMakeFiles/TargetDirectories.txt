@@ -1,0 +1,3 @@
+/Users/ranaatul/Code/vector-db-book/src/cpp/db/build/CMakeFiles/test_vector_db.dir
+/Users/ranaatul/Code/vector-db-book/src/cpp/db/build/CMakeFiles/edit_cache.dir
+/Users/ranaatul/Code/vector-db-book/src/cpp/db/build/CMakeFiles/rebuild_cache.dir
